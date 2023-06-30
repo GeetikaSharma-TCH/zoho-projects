@@ -5,7 +5,7 @@ console.log('useradata==== 222')
 
 const UsersData = () => {
     console.log('useradata')
-    const token = "RteCJur0Ywsk"
+    const token = "1000.026dc72b519f127d6ecbfa090ecdffd9.5bb92c9446b530a607785b712ef8ce94"
     const getData = () => {
         console.log('ere')
         // axios.get("https://projectsapi.zoho.in/restapi/portal/60022279860/projects/",
@@ -25,6 +25,9 @@ const UsersData = () => {
         
         fetch(
             "https://projectsapi.zoho.in/portal/60022279860",{
+                headers : {
+                   "Authorization" : ` Zoho-oauthtoken ${token}`,
+                },
                 mode : "no-cors"
             }
           ) 
